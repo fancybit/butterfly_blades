@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeLake", "ShapeLake\ShapeLake.csproj", "{2E39F377-E56A-4076-8746-1B4A070642C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sanyata", "Sanyata\Sanyata.csproj", "{352FD332-E15F-4D2F-8272-A3F2853B49CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{27B620AD-CB0D-4A3E-96AB-30D891A2B521}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E39F377-E56A-4076-8746-1B4A070642C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E39F377-E56A-4076-8746-1B4A070642C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E39F377-E56A-4076-8746-1B4A070642C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E39F377-E56A-4076-8746-1B4A070642C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352FD332-E15F-4D2F-8272-A3F2853B49CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352FD332-E15F-4D2F-8272-A3F2853B49CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352FD332-E15F-4D2F-8272-A3F2853B49CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352FD332-E15F-4D2F-8272-A3F2853B49CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B620AD-CB0D-4A3E-96AB-30D891A2B521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B620AD-CB0D-4A3E-96AB-30D891A2B521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B620AD-CB0D-4A3E-96AB-30D891A2B521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B620AD-CB0D-4A3E-96AB-30D891A2B521}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B48BA129-7C38-465A-B357-3DE11E9975D5}
+	EndGlobalSection
+EndGlobal
