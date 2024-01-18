@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{16D9B2F5-2479-43AA-BD71-F5CA8949D5B1}"
 	ProjectSection(SolutionItems) = preProject
-		ReadMe.MD = ReadMe.MD
+		README.MD = README.MD
 	EndProjectSection
 EndProject
 Global
