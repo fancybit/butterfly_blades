@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Reflection;
 using FancyBit;
 
 namespace Sanyata
@@ -32,30 +33,33 @@ namespace Sanyata
 
         private static void SelfCheck()
         {
-            Dictionary<string, string> hashes = new Dictionary<string, string>();
             //获取校验码
+            Dictionary<string, string> hashes = new Dictionary<string, string>();
             if(File.Exists(ChecksumFileName)){
                 hashes = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(ChecksumFileName));
             }
 
             // 获取当前进程
             Process currentProcess = Process.GetCurrentProcess();
-
-            Console.WriteLine("当前进程({0})加载的模块:", currentProcess.ProcessName);
-
-            // 遍历所有模块
+            Console.WriteLine("模块自检中:", currentProcess.ProcessName);
             foreach (ProcessModule module in currentProcess.Modules)
             {
-                Console.WriteLine("\t{0} - {1}", module.ModuleName, module.FileName);
+                //Console.WriteLine("\t{0} - {1}", module.ModuleName, module.FileName);
                 var hash = FileHash.GetFileMD5Hash(module.FileName);
-                Console.WriteLine($"计算结果:{hash}");
                 if (!hashes.TryGetValue(module.FileName,out string oldHash)){
                     hashes[module.FileName] = hash;
                     Console.WriteLine($"文件{module.FileName}哈希不存在,已记录新哈希值：{hash}");
                 }
-
+                if (oldHash != hash)
+                {
+                    hashes[module.FileName] = hash;
+                    Console.WriteLine($"文件{module.FileName}哈希改变,新哈希值：{hash}");
+                }
             }
+            //记录校验码
+            File.WriteAllText(ChecksumFileName,JsonConvert.SerializeObject(hashes));
 
+            Console.WriteLine("模块自检完成。");
             Console.ReadLine();
         }
 

@@ -59,7 +59,7 @@
       <Name>ShapeLake</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utils\Utils.csproj">
-      <Project>{27b620ad-cb0d-4a3e-96ab-30d891a2b521}</Project>
+      <Project>{a92c1c1a-b583-4707-b499-09e8269f40bd}</Project>
       <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
