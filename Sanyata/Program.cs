@@ -77,11 +77,26 @@ namespace Sanyata
                 var secs = inputCmd.Split().Select(x => x as object).ToList();
                 var cmdName = secs[0].ToString();
                 secs.RemoveAt(0);
-                var parms = secs.ToArray();
-                while (Feeling && CmdTable.TryGetValue(cmdName, out var method))
+                var parm = string.Join(" ", secs.Select(x => x.ToString()).ToArray());
+                if (Feeling && CmdTable.TryGetValue(cmdName, out var method))
                 {
                     Print(DateTime.Now.ToString());
-                    method.Invoke(null, parms);
+                    try
+                    {
+                        if (secs.Count > 1)
+                        {
+                            method.Invoke(null, new object[] { parm });
+                        }
+                        else
+                        {
+                            method.Invoke(null, new object[] { });
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Print(ex.Message);
+                        Print(ex.StackTrace);
+                    }
                 }
             }
             Print(DateTime.Now.ToString());
