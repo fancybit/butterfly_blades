@@ -19,5 +19,21 @@ namespace Sanyata
             MessageBox.Show(message);
         }
 
+        //弹窗拦截
+        /// <summary>
+        /// 捕捉并且拦截弹窗
+        /// </summary>
+        public static void BanWnd()
+        {
+
+        }
+
+        /// <summary>
+        /// 显示弹窗拦截列表
+        /// </summary>
+        public static void ShowWndBanList()
+        {
+
+        }
     }
 }

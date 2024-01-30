@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 		README.MD = README.MD
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WINAPIS", "WINAPIS\WINAPIS.csproj", "{D32F8404-E4F6-4D0A-9AD1-11694A0ED594}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{A92C1C1A-B583-4707-B499-09E8269F40BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A92C1C1A-B583-4707-B499-09E8269F40BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A92C1C1A-B583-4707-B499-09E8269F40BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D32F8404-E4F6-4D0A-9AD1-11694A0ED594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32F8404-E4F6-4D0A-9AD1-11694A0ED594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32F8404-E4F6-4D0A-9AD1-11694A0ED594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32F8404-E4F6-4D0A-9AD1-11694A0ED594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

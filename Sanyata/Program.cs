@@ -19,6 +19,7 @@ namespace Sanyata
             = new Dictionary<string, MethodInfo>();
         public const string ChecksumFileName = "checksum.dat";
 
+
         static void Main(string[] args)
         {
             var methods = typeof(Commands).GetMethods(BindingFlags.Static | BindingFlags.Public);
@@ -83,7 +84,7 @@ namespace Sanyata
                     Print(DateTime.Now.ToString());
                     try
                     {
-                        if (secs.Count > 1)
+                        if (secs.Count > 0)
                         {
                             method.Invoke(null, new object[] { parm });
                         }
